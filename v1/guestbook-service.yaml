@@ -6,8 +6,9 @@ metadata:
     app: guestbook
 spec:
   ports:
-  - port: 3000
-    targetPort: http-server
+  - port: 80
+    targetPort: 3000 
+    name: http-server
   selector:
     app: guestbook
   type: LoadBalancer
